@@ -42,6 +42,7 @@ class Model_cliente extends CI_Model{
 				'email' => $dados ['email'],
 				'cep' => $dados ['cep'],
 				'endereco' => $dados ['endereco'],
+				'numero' => $dados ['numero'],
 				'complemento' => $dados ['complemento'],
 				'bairro' => $dados ['bairro'],
 				'cidade' => $dados ['cidade'],

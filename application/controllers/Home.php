@@ -265,29 +265,6 @@ class Home extends CI_Controller {
 				$dados ['resultadoPerfil'] = $resultadoPerfil;
 					
 		if ($this->input->post ()) {
-			if ((empty(trim($this->input->post('nomefantasia')))) || 
-				(empty(trim($this->input->post('razaosocial')))) || 
-				(empty(trim($this->input->post('cnpj')))) || 
-				(empty(trim($this->input->post('cpf')))) || 
-				(empty(trim($this->input->post('telefonecomercial')))) || 
-				(empty(trim($this->input->post('celular')))) || 
-				(empty(trim($this->input->post('email')))) || 
-				(empty(trim($this->input->post('cep')))) || 
-				(empty(trim($this->input->post('endereco')))) || 
-				(empty(trim($this->input->post('complemento')))) || 
-				(empty(trim($this->input->post('bairro')))) || 
-				(empty(trim($this->input->post('cidade')))) || 
-				(empty(trim($this->input->post('estado'))))) {
-							
-				$dados ['msg'] = '<div class="alert alert-danger alert-dismissible">
-				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-				<h4><i class="icon fa fa-ban"></i> Atenção!</h4>
-				Campos imcompletos! Preencha todos os campos e tente novamente.
-				</div>';
-
-				$dados ['tela'] = 'clientes/view_cadastrocliente';
-				$this->load->view ( 'view_home', $dados );
-			} else {
 				$dadosusuario ['nomefantasia'] = $this->input->post ( 'nomefantasia' );
 				$dadosusuario ['razaosocial'] = $this->input->post ( 'razaosocial' );
 				$dadosusuario ['cnpj'] = $this->input->post ( 'cnpj' );
@@ -297,6 +274,7 @@ class Home extends CI_Controller {
 				$dadosusuario ['email'] = $this->input->post('email');
 				$dadosusuario ['cep'] = $this->input->post ( 'cep' );
 				$dadosusuario ['endereco'] = $this->input->post ( 'endereco' );
+				$dadosusuario ['numero'] = $this->input->post ( 'numero' );
 				$dadosusuario ['complemento'] = $this->input->post ( 'complemento' );
 				$dadosusuario ['bairro'] = $this->input->post ( 'bairro' );
 				$dadosusuario ['cidade'] = $this->input->post ( 'cidade' );
@@ -321,7 +299,6 @@ class Home extends CI_Controller {
 				$dados ['tela'] = 'clientes/view_cadastrocliente';
 			}
 				$this->load->view ( 'view_home', $dados );
-			}
 		}else{
 			$dados ['tela'] = 'clientes/view_cadastrocliente';
 			$this->load->view ( 'view_home', $dados );
