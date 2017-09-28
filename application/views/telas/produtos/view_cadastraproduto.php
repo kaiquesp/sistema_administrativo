@@ -24,6 +24,13 @@
             </div>
           </div>
           <div class="item form-group">
+            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="numeroreferencia">Número de referência do Produto <span class="required">*</span>
+            </label>
+            <div class="col-md-10 col-sm-12 col-xs-12">
+              <input id="numeroreferencia" name="numeroreferencia" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2"placeholder="ex: Ref: 123456" required="required" type="number">
+            </div>
+          </div>
+          <div class="item form-group">
             <label class="control-label col-md-2 col-sm-2 col-xs-12" for="unidadevenda">Unidade de venda<span class="required">*</span>
             </label>
             <div class="col-md-10 col-sm-12 col-xs-12">

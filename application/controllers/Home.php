@@ -335,6 +335,7 @@ function listacliente() {
 				$replace = array('', '.');
 				
 				$dadosusuario['descricaoproduto'] = $this->input->post( 'descricaoproduto' );
+				$dadosusuario['numeroreferencia'] = $this->input->post( 'numeroreferencia' );
 				$dadosusuario['unidadevenda'] = $this->input->post( 'unidadevenda' );
 				$dadosusuario['valormercadoria'] = $valor = str_replace($source, $replace, $this->input->post('valormercadoria'));
 				$dadosusuario['valorvenda'] = $valor = str_replace($source, $replace, $this->input->post( 'valorvenda' ));

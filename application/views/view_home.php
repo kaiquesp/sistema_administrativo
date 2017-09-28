@@ -19,7 +19,7 @@ if ($this->session->userdata('logged_in')){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sistema Oficina | </title>
+    <title>Sistema JapaCar </title>
 
     <!-- Bootstrap -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -54,7 +54,7 @@ if ($this->session->userdata('logged_in')){
           <div class="col-md-3 left_col">
               <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                  <a href="dashboard" class="site_title"><i class="fa fa-paw"></i> <span>Sistema Oficinas</span></a>
+                  <a href="dashboard" class="site_title"><i class="fa fa-paw"></i> <span>Sistema JapaCar</span></a>
               </div>
 
               <div class="clearfix"></div>

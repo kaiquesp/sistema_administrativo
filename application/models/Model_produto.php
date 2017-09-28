@@ -9,6 +9,7 @@ class Model_produto extends CI_Model{
 			extract ( $dados );
 			$this->db->insert ( 'produtos', array (
 				'descricaoproduto' => $dados ['descricaoproduto'],
+				'numeroreferencia' => $dados ['numeroreferencia'],
 				'unidadevenda' => $dados ['unidadevenda'],
 				'valormercadoria' => $dados ['valormercadoria'],
 				'valorvenda' => $dados ['valorvenda'],
