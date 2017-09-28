@@ -69,6 +69,11 @@ $route['cadastrocliente'] 			= 'home/cadastrocliente';
 $route['consultacliente'] 			= 'home/consultacliente';
 $route['listacliente'] 				= 'home/listacliente';
 
+/*Produtos*/
+$route['cadastraproduto'] 			= 'home/cadastraproduto';
+$route['consultaproduto'] 			= 'home/consultaproduto';
+$route['listaproduto'] 				= 'home/listaproduto';
+
 /*Perfil*/
 $route['perfil'] 				= 'home/perfil';
 

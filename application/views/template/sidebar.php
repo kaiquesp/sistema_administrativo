@@ -38,8 +38,8 @@
       <li><a><i class="fa fa-shopping-cart"></i> Produtos <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
           <li><a href="cadastraproduto"><i class="fa fa-plus"></i> Cadastro</a></li>
-          <li><a href="#"><i class="fa fa-search"></i> Consulta</a></li>
-          <li><a href="#"><i class="fa fa-list-alt"></i> Listar</a></li>
+          <li><a href="consultaproduto"><i class="fa fa-search"></i> Consulta</a></li>
+          <li><a href="listaproduto"><i class="fa fa-list-alt"></i> Listar</a></li>
         </ul>
       </li>
     </ul>

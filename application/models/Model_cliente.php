@@ -54,11 +54,11 @@ class Model_cliente extends CI_Model{
 		}
 	}
 
-	/*function buscausuario(){
+	function buscacliente(){
 		$this->db->select('*');
-		$this->db->from('usuarios');
+		$this->db->from('clientes');
 		//verificar se o email é válido
-		$this->db->where('status', '1');
+		$this->db->order_by("nomefantasia", "asc");
 		$query = $this->db->get();
 		if($query->num_rows() >= 1){
 			return $query->result();
@@ -66,6 +66,8 @@ class Model_cliente extends CI_Model{
 			return false;
 		}
 	}
+
+	/*
 
 	function consultausuario($dados = NULL){
 
