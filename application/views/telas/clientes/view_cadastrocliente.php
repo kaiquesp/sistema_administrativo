@@ -17,56 +17,63 @@
           <form role="form" action="cadastrocliente" method="POST" data-parsley-validate class="form-horizontal form-label-left">
           </p>
           <div class="item form-group">
+            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="tipocliente">Tipo de Cliente <span class="required">*</span>
+            </label>
+            <div class="col-md-10 col-sm-12 col-xs-12">
+             <p>
+               <input type="radio" name="optionsRadiosInline" id="radio4" onClick="habilitacao()" checked>Pessoa Física
+               <input type="radio" name="optionsRadiosInline"  id="radio5" onClick="habilitacao()">Pessoa Jurídica 
+             </p>
+      
+           </div>
+         </div>
+          <div class="item form-group">
+            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="nomecompleto">Nome Completo <span class="required">*</span>
+            </label>
+            <div class="col-md-10 col-sm-12 col-xs-12">
+              <input id="nomecompleto" name="nomecompleto" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="Informe o nome fantasia do cliente" required="required" type="text">
+            </div>
+          </div>
+          <div class="item form-group">
             <label class="control-label col-md-2 col-sm-2 col-xs-12" for="nomefantasia">Nome Fantasia <span class="required">*</span>
             </label>
             <div class="col-md-10 col-sm-12 col-xs-12">
-              <input id="nomefantasia" name="nomefantasia" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="Informe o nome fantasia do cliente" required="required" type="text">
+              <input id="nomefantasia" name="nomefantasia" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="Informe o nome fantasia do cliente" required="required" type="text" disabled="">
             </div>
           </div>
           <div class="item form-group">
             <label class="control-label col-md-2 col-sm-2 col-xs-12" for="razaosocial">Razão Social <span class="required">*</span>
             </label>
             <div class="col-md-10 col-sm-12 col-xs-12">
-              <input id="razaosocial" name="razaosocial" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="Informe a Razão Social" type="text">
+              <input id="razaosocial" name="razaosocial" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="Informe a Razão Social" type="text" disabled="">
             </div>
           </div>
-          <div class="item form-group">
-            <label class="control-label col-md-2 col-sm-2 col-xs-12" for="tipocliente">Tipo de Cliente <span class="required">*</span>
-            </label>
-            <div class="col-md-10 col-sm-12 col-xs-12">
-             <p>
-               <input type="radio" name="optionsRadiosInline"  id="radio5" onClick="habilitacao()">Pessoa Jurídica 
-               <input type="radio" name="optionsRadiosInline" id="radio4" onClick="habilitacao()">Pessoa Física
-             </p>
-      
-           </div>
-         </div>
          <div class="item form-group">
           <label class="control-label col-md-2 col-sm-2 col-xs-12" for="cnpj">CNPJ <span class="required">*</span>
           </label>
           <div class="col-md-10 col-sm-12 col-xs-12">
-            <input id="cnpj" name="cnpj" class="form-control col-md-7 col-xs-12" placeholder="Informe o CNPJ" required="required" type="text" disabled="">
+            <input id="cnpj" name="cnpj" class="form-control col-md-7 col-xs-12" placeholder="Informe o CNPJ" required="required" type="text" disabled="" data-inputmask="'mask' : '**.***.***/****-**'">
           </div>
         </div>
         <div class="item form-group">
           <label class="control-label col-md-2 col-sm-2 col-xs-12" for="cpf">CPF <span class="required">*</span>
           </label>
           <div class="col-md-10 col-sm-12 col-xs-12">
-            <input type="text" id="cpf" name="cpf" required="required" class="form-control col-md-7 col-xs-12" placeholder="Informe o CPF" data-inputmask="'mask' : '****-****-****-****-****-***'">
+            <input type="text" id="cpf" name="cpf" required="required" class="form-control col-md-7 col-xs-12" placeholder="Informe o CPF" data-inputmask="'mask' : '***.***.***-**'">
           </div>
         </div>
         <div class="item form-group">
           <label class="control-label col-md-2 col-sm-2 col-xs-12" for="telefonecomercial">Telefone Comercial <span class="required">*</span>
           </label>
           <div class="col-md-10 col-sm-12 col-xs-12">
-            <input id="telefonecomercial" name="telefonecomercial" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="Informe o Telefone Comercial" type="text">
+            <input id="telefonecomercial" name="telefonecomercial" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="Informe o Telefone Comercial" type="text" data-inputmask="'mask' : '(99) 9999-9999'">
           </div>
         </div>
         <div class="item form-group">
           <label class="control-label col-md-2 col-sm-2 col-xs-12" for="celular">Telefone Celular <span class="required">*</span>
           </label>
           <div class="col-md-10 col-sm-12 col-xs-12">
-            <input id="celular" name="celular" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="Informe o Telefone Celular" type="text">
+            <input id="celular" name="celular" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="Informe o Telefone Celular" type="text" data-inputmask="'mask' : '(99) 99999-9999'">
           </div>
         </div>
         <div class="item form-group">
@@ -80,7 +87,7 @@
           <label class="control-label col-md-2 col-sm-2 col-xs-12" for="cep">CEP <span class="required">*</span>
           </label>
           <div class="col-md-10 col-sm-12 col-xs-12">
-            <input id="cep" name="cep" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="Informe o CEP" required="required" type="text">
+            <input id="cep" name="cep" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" placeholder="Informe o CEP" required="required" type="text" data-inputmask="'mask' : '99999-999'">
           </div>
         </div>
         <div class="item form-group">
@@ -119,7 +126,7 @@
         <div class="form-group">
           <label class="control-label col-md-2 col-sm-2 col-xs-12">Estado</label>
           <div class="col-md-10 col-sm-12 col-xs-12">
-            <select class="select2_single form-control" tabindex="-1" name="estado" id="estado">
+            <select class="select2_single form-control" name="estado" id="estado">
               <option>Selecione o estado</option>
               <option value="AC">Acre</option>
               <option value="AL">Alagoas</option>
@@ -233,14 +240,17 @@
           function habilitacao(){
             if(document.getElementById('radio4').checked == true){
               document.getElementById('cnpj').disabled = true;
+              document.getElementById('nomefantasia').disabled = true;
+              document.getElementById('razaosocial').disabled = true;
               document.getElementById('cpf').disabled = false;
             }
             if(document.getElementById('radio4').checked == false){
               document.getElementById('cnpj').disabled = false;
+              document.getElementById('nomefantasia').disabled = false;
+              document.getElementById('razaosocial').disabled = false;
               document.getElementById('cpf').disabled = true;
             }
           }
         </script>
 
-        <!-- jquery.inputmask -->
-    <script src="../assets/js/jquery.inputmask/jquery.inputmask.bundle.min.js"></script>
+        

@@ -19,7 +19,7 @@
   <div class="menu_section">
     <ul class="nav side-menu">
     <li><a href="dashboard"><i class="fa fa-home"></i> Home</a></li>
-      <li><a><i class="fa fa-users"></i> Usuários <span class="fa fa-chevron-down"></span></a>
+      <li><a><i class="fa fa-user"></i> Usuários <span class="fa fa-chevron-down"></span></a>
         <ul class="nav child_menu">
           <li><a href="cadastrausuario"><i class="fa fa-plus"></i> Cadastrar</a></li>
           <li><a href="consultausuario"><i class="fa fa-search"></i> Consultar</a></li>
@@ -41,6 +41,22 @@
           <li><a href="listaproduto"><i class="fa fa-list-alt"></i> Listar</a></li>
         </ul>
       </li>
+      <li><a><i class="fa fa-check-square-o"></i> Pedidos <span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu">
+          <li><a href="novopedido"><i class="fa fa-plus"></i> Novo Pedido</a></li>
+          <li><a href="alterarpedido"><i class="fa fa-search"></i> Alterar Pedidos</a></li>
+          <li><a href="consultarpedido"><i class="fa fa-list-alt"></i> Consultar Pedidos</a></li>
+          <li><a href="emissaopedido"><i class="fa fa-list-alt"></i> Emissão de Pedidos</a></li>
+        </ul>
+      </li>
+      <li><a><i class="fa fa-area-chart"></i> Relatórios <span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu">
+          <li><a href="relatorioclientes"><i class="fa fa-plus"></i> Clientes</a></li>
+          <li><a href="relatorioprodutos"><i class="fa fa-search"></i> Produtos</a></li>
+          <li><a href="relatoriopedidos"><i class="fa fa-list-alt"></i> Pedidos</a></li>
+        </ul>
+      </li>
+      <li><a href="agenda"><i class="fa fa-calendar"></i> Agenda</a></li>
       <li><a href="requisicaoajax"><i class="fa fa-circle-o"></i> Requisição Jquery/Ajax</a></li>
     </ul>
   </div>

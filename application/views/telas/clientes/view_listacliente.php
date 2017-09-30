@@ -2,7 +2,7 @@
  <div class="row tile_count">
   <div class="col-md-6 col-sm-6 col-xs-6 tile_stats_count">
     <span class="count_top"><i class="fa fa-user"></i> Total de clientes</span>
-    <div class="count"><?php echo sizeof($resultadocliente); ?></div>
+
     <!-- <span class="count_bottom"><i class="green">4% </i> From last Week</span> -->
   </div>
 </div>
@@ -28,6 +28,7 @@
         <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
           <thead>
             <tr>
+              <th>Nome Completo</th>
               <th>Nome Fantasia</th>
               <th>Razão Social</th>
               <th>CNPJ</th>
@@ -49,38 +50,39 @@
             <?php 
             if(isset($resultadocliente)){
               foreach ($resultadocliente as $cliente){
-                ?>
-                <tr>
-                  <td><?php echo $cliente->nomefantasia; ?></td>
-                  <td><?php echo $cliente->razaosocial; ?></td>
-                  <td><?php echo $cliente->cnpj; ?></td>
-                  <td><?php echo $cliente->cpf; ?></td>
-                  <td><?php echo $cliente->telefonecomercial; ?></td>
-                  <td><?php echo $cliente->celular; ?></td>
-                  <td><?php echo $cliente->email; ?></td>
-                  <td><?php echo $cliente->cep; ?></td>
-                  <td><?php echo $cliente->endereco; ?></td>
-                  <td><?php echo $cliente->numero; ?></td>
-                  <td><?php echo $cliente->complemento; ?></td>
-                  <td><?php echo $cliente->bairro; ?></td>
-                  <td><?php echo $cliente->cidade; ?></td>
-                  <td><?php echo $cliente->estado; ?></td>
-                  <td><button type="button" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></button><a href="#" type="button" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button></td>
+                   ?>
+                    <tr>
+                    <td><?php echo $cliente->nomefantasia; ?></td>
+                    <td><?php echo $cliente->razaosocial; ?></td>
+                    <td><?php echo $cliente->cnpj; ?></td>
+                    <td><?php echo $cliente->cpf; ?></td>
+                    <td><?php echo $cliente->telefonecomercial; ?></td>
+                    <td><?php echo $cliente->celular; ?></td>
+                    <td><?php echo $cliente->email; ?></td>
+                    <td><?php echo $cliente->cep; ?></td>
+                    <td><?php echo $cliente->endereco; ?></td>
+                    <td><?php echo $cliente->numero; ?></td>
+                    <td><?php echo $cliente->complemento; ?></td>
+                    <td><?php echo $cliente->bairro; ?></td>
+                    <td><?php echo $cliente->cidade; ?></td>
+                    <td><?php echo $cliente->estado; ?></td>
+                    <td><button type="button" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></button><a href="deletecliente?id=<?php echo $cliente->id; ?>" type="button" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button></td>
 
-                </tr>
-                <?php 
-              }
-            }
-            ?>
+                    </tr>
+                   <?php
+                  }
+                }
+              
+              ?>
 
-          </tbody>
-        </table>
+            </tbody>
+          </table>
 
 
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
 

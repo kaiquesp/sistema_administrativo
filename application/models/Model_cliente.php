@@ -47,7 +47,7 @@ class Model_cliente extends CI_Model{
 				'bairro' => $dados ['bairro'],
 				'cidade' => $dados ['cidade'],
 				'estado' => $dados ['estado']
-				) );
+			) );
 			return true;
 		} else {
 			return false;
@@ -58,13 +58,19 @@ class Model_cliente extends CI_Model{
 		$this->db->select('*');
 		$this->db->from('clientes');
 		//verificar se o email é válido
-		$this->db->order_by("nomefantasia", "asc");
+		$this->db->order_by("nomecompleto", "asc");
 		$query = $this->db->get();
 		if($query->num_rows() >= 1){
 			return $query->result();
 		}else{
 			return false;
 		}
+	}
+
+	function deleteclienteid($id){
+		$this->db->where('id', $id);
+		$this->db->delete('clientes');
+		
 	}
 
 	/*

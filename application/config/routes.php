@@ -63,18 +63,32 @@ $route['requisicaoajax'] 			= 'requisicaoajax';
 $route['buscausuarioperfil'] 		= 'buscausuarioperfil';
 $route['listausuario'] 				= 'home/listausuario';
 $route['consultausuario'] 			= 'home/consultausuario';
+$route['perfil'] 					= 'home/perfil';
 
 /*Clientes*/
 $route['cadastrocliente'] 			= 'home/cadastrocliente';
 $route['consultacliente'] 			= 'home/consultacliente';
 $route['listacliente'] 				= 'home/listacliente';
+$route['deletecliente'] 			= 'home/listacliente';
 
 /*Produtos*/
 $route['cadastraproduto'] 			= 'home/cadastraproduto';
 $route['consultaproduto'] 			= 'home/consultaproduto';
 $route['listaproduto'] 				= 'home/listaproduto';
 
-/*Perfil*/
-$route['perfil'] 				= 'home/perfil';
+/*Pedidos*/
+$route['novopedido'] 				= 'home/novopedido';
+$route['alterarpedido'] 			= 'home/alterarpedido';
+$route['consultarpedido'] 			= 'home/consultarpedido';
+$route['emissaopedido'] 			= 'home/emissaopedido';
+
+/*Relatórios*/
+$route['relatorioclientes'] 		= 'home/relatorioclientes';
+$route['relatorioprodutos'] 		= 'home/relatorioprodutos';
+$route['relatoriopedidos'] 			= 'home/relatoriopedidos';
+
+/*Agenda*/
+$route['agenda'] 					= 'home/agenda';
+
 
 

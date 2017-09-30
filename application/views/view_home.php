@@ -137,5 +137,7 @@ if ($this->session->userdata('logged_in')){
         <script src="../assets/js/jszip/jszip.min.js"></script>
         <script src="../assets/js/pdfmake/pdfmake.min.js"></script>
         <script src="../assets/js/pdfmake/vfs_fonts.js"></script>
+        <!-- jquery.inputmask -->
+        <script src="../assets/js/jquery.inputmask/jquery.inputmask.bundle.min.js"></script>
     </body>
     </html>
