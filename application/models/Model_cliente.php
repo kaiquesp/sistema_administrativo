@@ -33,20 +33,21 @@ class Model_cliente extends CI_Model{
 		if ($dados !== NULL) {
 			extract ( $dados );
 			$this->db->insert ( 'clientes', array (
-				'nomefantasia' => $dados ['nomefantasia'],
-				'razaosocial' => $dados ['razaosocial'],
-				'cnpj' => $dados ['cnpj'],
-				'cpf' => $dados ['cpf'],
+				'nomecompleto'		=> $dados['nomecompleto'],
+				'nomefantasia'		=> $dados ['nomefantasia'],
+				'razaosocial'		=> $dados ['razaosocial'],
+				'cnpj' 				=> $dados ['cnpj'],
+				'cpf' 				=> $dados ['cpf'],
 				'telefonecomercial' => $dados ['telefonecomercial'],
-				'celular' => $dados ['celular'],
-				'email' => $dados ['email'],
-				'cep' => $dados ['cep'],
-				'endereco' => $dados ['endereco'],
-				'numero' => $dados ['numero'],
-				'complemento' => $dados ['complemento'],
-				'bairro' => $dados ['bairro'],
-				'cidade' => $dados ['cidade'],
-				'estado' => $dados ['estado']
+				'celular' 			=> $dados ['celular'],
+				'email' 			=> $dados ['email'],
+				'cep' 				=> $dados ['cep'],
+				'endereco' 			=> $dados ['endereco'],
+				'numero' 			=> $dados ['numero'],
+				'complemento' 		=> $dados ['complemento'],
+				'bairro' 			=> $dados ['bairro'],
+				'cidade' 			=> $dados ['cidade'],
+				'estado' 			=> $dados ['estado']
 			) );
 			return true;
 		} else {

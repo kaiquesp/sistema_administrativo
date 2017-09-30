@@ -52,6 +52,7 @@
               foreach ($resultadocliente as $cliente){
                    ?>
                     <tr>
+                    <td><?php echo $cliente->nomecompleto; ?></td>
                     <td><?php echo $cliente->nomefantasia; ?></td>
                     <td><?php echo $cliente->razaosocial; ?></td>
                     <td><?php echo $cliente->cnpj; ?></td>
