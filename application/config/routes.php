@@ -90,5 +90,10 @@ $route['relatoriopedidos'] 			= 'home/relatoriopedidos';
 /*Agenda*/
 $route['agenda'] 					= 'home/agenda';
 
+/*Configurações*/
+/*Usuários*/
+$route['configusuarios'] 			= 'home/configusuarios';
+
+
 
 

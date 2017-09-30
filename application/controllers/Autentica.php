@@ -38,7 +38,8 @@ class Autentica extends CI_Controller {
                   'loginUsuario' => $usuario->login,
                   'emailUsuario' => $usuario->email,
                   'dataCadastro' => $usuario->datacadastro,
-                  'ultimoAcesso' => $usuario->dataultimoacesso
+                  'ultimoAcesso' => $usuario->dataultimoacesso,
+                  'status' 		 => $usuario->status
                 );
             }
 

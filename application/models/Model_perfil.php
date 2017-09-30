@@ -6,7 +6,7 @@ class Model_perfil extends CI_Model{
 		$this->db->select('perfilid, descricao');
 		$this->db->from('perfil');
 		
-		$this->db->where('status','1');
+		//$this->db->where('status','1');
 
 		$query = $this->db->get();
 		return $query->result();

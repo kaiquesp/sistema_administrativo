@@ -58,6 +58,11 @@
       </li>
       <li><a href="agenda"><i class="fa fa-calendar"></i> Agenda</a></li>
       <li><a href="requisicaoajax"><i class="fa fa-circle-o"></i> Requisição Jquery/Ajax</a></li>
+      <li><a><i class="fa fa-cogs"></i> Configurações <span class="fa fa-chevron-down"></span></a>
+        <ul class="nav child_menu">
+          <li><a href="configusuarios"><i class="fa fa-user"></i> Usuários</a></li>
+        </ul>
+      </li>
     </ul>
   </div>
   </div>
