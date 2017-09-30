@@ -25,6 +25,7 @@
                         <th>E-mail</th>
                         <th>Cadastrado em:</th>
                         <th>Ultimo Acesso</th>
+                        <th>Status</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -39,6 +40,13 @@
                             <td><?php echo $usuarios->email; ?></td>
                             <td><?php echo $usuarios->datacadastro; ?></td>
                             <td><?php echo $usuarios->dataultimoacesso; ?></td>
+                            <?php 
+                              if($usuarios->nomestatus == 'Ativo'){
+                                echo "<td><button type='button' class='btn btn-success btn-xs'>".$usuarios->nomestatus."</button></td>";
+                              }elseif($usuarios->nomestatus == 'Desativado'){
+                                  echo "<td><button type='button' class='btn btn-danger btn-xs'>".$usuarios->nomestatus."</button></td>";
+                              }
+                            ?>
                           </tr>
                           <?php 
                         }

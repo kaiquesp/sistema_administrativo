@@ -8,6 +8,8 @@ class Home extends CI_Controller {
 		$this->load->library('form_validation');
 		$this->load->helper('form');
 		date_default_timezone_set('America/Sao_Paulo');
+		$session_youtube = $this->session->userdata('logged_in');
+		$status = $session_youtube['status'];
 	}
 
 	public function index(){
@@ -269,7 +271,7 @@ class Home extends CI_Controller {
 			$dados ['resultadoPerfil'] = $resultadoPerfil;
 
 			if ($this->input->post ()) {
-				$dadosusuario ['nomecompleto'] = $this->input->post ( 'nomecompleto' );
+				$dadosusuario['nomecompleto'] = $this->input->post ( 'nomecompleto' );
 				$dadosusuario ['nomefantasia'] = $this->input->post ( 'nomefantasia' );
 				$dadosusuario ['razaosocial'] = $this->input->post ( 'razaosocial' );
 				$dadosusuario ['cnpj'] = $this->input->post ( 'cnpj' );
@@ -320,13 +322,13 @@ class Home extends CI_Controller {
 		$dados['resultadocliente'] = $resultadocliente;
 
 		
-			if (empty($dados['resultadocliente'])) {
-				$dados['tela'] = 'clientes/view_vazio';
-				$this->load->view ('view_home', $dados);
-			}else{
-				$dados['tela'] = 'clientes/view_listacliente';
-				$this->load->view ('view_home', $dados);
-			}
+		if (empty($dados['resultadocliente'])) {
+			$dados['tela'] = 'clientes/view_vazio';
+			$this->load->view ('view_home', $dados);
+		}else{
+			$dados['tela'] = 'clientes/view_listacliente';
+			$this->load->view ('view_home', $dados);
+		}
 		
 	}else{
 		redirect ( 'login', 'refresh' );
@@ -334,7 +336,7 @@ class Home extends CI_Controller {
 	}
 }
 
-	function deletecliente(){
+function deletecliente(){
 		if ($this->session->userdata ( 'logged_in' )) { // VALIDA USUÁRIO LOGADO
 			$this->load->model ( 'model_perfil' );
 			$resultadoPerfil = $this->model_perfil->buscaPerfil ();
@@ -874,6 +876,36 @@ class Home extends CI_Controller {
 				$dados ['tela'] = 'view_perfil';
 				$this->load->view ( 'view_home', $dados );
 			}
+		}else{
+			redirect ( 'login', 'refresh' );
+		}
+	}
+
+	/*Configurações*/
+	/*Usuários*/
+	function configusuarios(){
+		if ($this->session->userdata('logged_in')) { 
+			$option = "";
+
+			
+			
+			$this->load->model ( 'model_perfil' );
+			$resultadoperf = $this->model_perfil->buscaPerfil();
+
+			if ($resultadoperf) {
+				foreach ( $resultadoperf as $perf ) {
+					$perf = $perf->descricao;
+					if(isset($status)){
+						if($status == $perf){
+							echo "você tem permissão ".$status."";
+						}else{
+							echo "não tem";
+						}
+					}
+				}
+			} 
+			
+			echo $option;
 		}else{
 			redirect ( 'login', 'refresh' );
 		}

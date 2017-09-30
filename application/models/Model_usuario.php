@@ -50,8 +50,8 @@ class Model_usuario extends CI_Model{
 	function buscausuario(){
 		$this->db->select('*');
 		$this->db->from('usuarios');
+		$this->db->join('statususuarios', 'status = statusid');
 		//verificar se o email é válido
-		$this->db->where('status', '1');
 		$query = $this->db->get();
 		if($query->num_rows() >= 1){
 			return $query->result();
